@@ -1,0 +1,41 @@
+//C program to calculate elecricity bill calculator
+#include <stdio.h>
+int main (){
+int customerID;
+char customerName[50];
+float unitsConsumed;
+float chargesPerUnit;
+float totalBill, surcharge;
+
+printf(" Enter customerID:");
+scanf("\n%d",&customerID);
+
+printf("Enter customerName:");
+scanf("\n%s",&customerName);
+
+printf("Enter unitsconsumed:");
+scanf("%f",&unitsConsumed);
+
+if(unitsConsumed<=199){
+chargesPerUnit=1.20;
+}
+else if(unitsConsumed>=200 &&unitsConsumed<400){
+chargesPerUnit=1.50;
+}
+else if(unitsConsumed>=400 &&unitsConsumed<600){
+chargesPerUnit=1.80;
+}else{unitsConsumed=2.00;
+}
+totalBill=chargesPerUnit*unitsConsumed;
+
+printf("ElectricityBill");
+printf("\ncustomer ID %d",customerID);
+printf("\ncustomer Name%c",customerName);
+printf("\nunits Consumed%f",unitsConsumed);
+printf("\ncharges Per Unit %f",chargesPerUnit);
+printf("\ntotal Bill %f",totalBill);
+
+return 0;
+}
+
+

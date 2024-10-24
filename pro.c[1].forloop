@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+int main(){
+int start,end;
+printf("enter the starting number");
+scanf("%d",&start);
+
+printf("enter the ending number");
+scanf("%d",&end);
+
+printf ("the range of your numbers is \n");
+
+for(int i=start;i<=end;i++){
+printf("%d\n",i);
+}
+	return 0;
+}
